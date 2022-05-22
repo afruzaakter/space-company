@@ -45,7 +45,7 @@ const Login = () => {
 
         <div className="card w-96  login-continer">
             <div className="card-body">
-                <h2 className="text-center text-info text-2xl font-bold mb-5">LOGIN</h2>
+                <h2 className="text-center text-primary text-2xl font-bold mb-5">LOGIN</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
                   
@@ -98,11 +98,11 @@ const Login = () => {
                     </label>
                 </div>
                 {/* {signInError} */}
-                <input className='btn w-full btn-info text-white text-xl max-w-xs' type="submit" value='Login' />  
+                <input className='btn w-full btn-primary text-white text-xl max-w-xs' type="submit" value='Login' />  
                 </form>
-                <p>New to Doctors Portal <Link className='text-info font-bold' to="/signup">Create New Account</Link> </p>
-                <p>Forgot Password? <Link className='text-info font-bold' to="/reset">Reset Password</Link> </p>
-                <div className="divider">OR</div>
+                <p>New to Doctors Portal <Link className='text-primary font-bold' to="/signup">Create New Account</Link> </p>
+                <p>Forgot Password? <Link className='text-primary font-bold' to="/reset">Reset Password</Link> </p>
+                <div className="divider"><h1 className='text-primary font-bold'>OR</h1></div>
                 {/* <button onClick={() => signInWithGoogle()} 
                 className="btn btn-info text-white "> 
                 <img className='mr-4' src={Google} alt="google" />     

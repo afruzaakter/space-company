@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const menuItem = <>
         <li className='mr-2'><NavLink to="/">Home</NavLink></li>
-        <li className='mr-2'><NavLink to="/blogs">Blogs</NavLink></li>
-        <li className='mr-2'><NavLink to="/myportfolio">My Portfolio</NavLink></li>
+        <li className='mr-2'><NavLink to="blogs">Blogs</NavLink></li>
+        <li className='mr-2'><NavLink to="myportfolio">My Portfolio</NavLink></li>
         <li className='mr-2'><NavLink to="login">Login</NavLink></li>
 
     </>
     return (
-        <div class="navbar p-5 pl-28">
+        <div class="navbar p-5 pl-28 fixed top-0">
             <div class="navbar-start">
                 <div class="dropdown w-full flex justify-between  ">
                     <div> <a class="btn btn-ghost normal-case text-xl">daisyUI</a> </div>

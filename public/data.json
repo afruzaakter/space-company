@@ -2,54 +2,48 @@
     {
       "name": "ACDELCO 335 PROFESSIONAL",
       "price": 83,
-      "quantity": 100,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/7yDrvt2/acdelco-335-professional.jpg",
       "description": "Dolore eu feugiat nulla facilisis at vero eros et accumsan et   iusto odio dignissim qui blandit praesent luptatum "
     },
     {
       "name": "BF GOODRICH ALL-TERRAIN KO",
       "price": 99,
-      "quantity": 200,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/BGh9x9F/bfgoodrich-all-terrain-ko-2.jpg",
       "description": " Sed rhoncus hendrerit lacus, et venenatis felis. Donec ut fringilla magna. Vivamus eu enim ut metus dictum cursus facilisis ."
     },
     {
       "name": "ACDELCO 335 PROFESSIONAL",
       "price": 83,
-      "quantity": 100,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/3zVCPxr/bluetooth-v4-2-radio-adapter-1.jpg",
       "description": "Proin nunc nibh, adipiscing eu nisi id, ultrices suscipit augue. Sed rhoncus hendrerit lacus, et  "
     },
     {
       "name": "BLUETOOTH V4.2 RADIO ADAPTER",
       "price": 83,
-      "quantity": 100,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/3zVCPxr/bluetooth-v4-2-radio-adapter-1.jpg",
       "description": "Dolore eu feugiat nulla facilisis at vero eros et accumsan et   iusto odio dignissim qui blandit praesent luptatum zzril  "
     },
     {
       "name": "ACDELCO 335 PROFESSIONAL",
       "price": 83,
-      "quantity": 100,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/3zVCPxr/bluetooth-v4-2-radio-adapter-1.jpg",
       "description": "Sed rhoncus hendrerit lacus, et venenatis felis. Donec ut fringilla magna. Vivamus eu enim ut metus dictum cursus ."
     },
     {
       "name": "ACDELCO 335 PROFESSIONAL",
       "price": 83,
-      "quantity": 100,
       "minimumOrderQuantity": 50,
-      "available": 1000,
+      "availableQuantity": 1000,
       "img": "https://i.ibb.co/3zVCPxr/bluetooth-v4-2-radio-adapter-1.jpg",
       "description": "Dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option into nihil imperdiet doming id quod mazim placerat facer possim ."
     }

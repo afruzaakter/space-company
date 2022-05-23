@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleParts = ({ part }) => {
-    const { name, img, quantity, minimumOrderQuantity, available, description, price } = part;
+    const { name, img, minimumOrderQuantity, availableQuantity, description, price } = part;
     return (
        <div>
            
@@ -12,11 +12,10 @@ const SingleParts = ({ part }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <h2 className="card-title">Price:{price}$</h2>
-                    <h2 className="card-title">Quantity: {quantity}ps</h2>
-                    <h2 className="card-title">Available:{available}ps</h2>
+                    <h2 className="card-title">Price: {price}$</h2>
+                    <h2 className="card-title">Available Quantity: {availableQuantity}ps</h2>
+                    <h3 className='card-title'>Minimum Order Quantity: {minimumOrderQuantity}ps</h3>
                     <p>{description}</p>
-                    <p >MiniMum Order Quantity: {minimumOrderQuantity}ps</p>
                     <div className="card-actions">
                         <button className="btn btn-primary">Buy Now</button>
                     </div>

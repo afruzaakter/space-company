@@ -16,8 +16,10 @@ const Navbar = () => {
     }
     const menuItem = <>
         <li className='mr-2 font-bold text-primary '><NavLink to="/">HOME</NavLink></li>
+        <li className='mr-2 font-bold text-primary'><NavLink to="purchase">PURCHASE</NavLink></li>
         <li className='mr-2 font-bold text-primary'><NavLink to="blogs">BLOGS</NavLink></li>
         <li className='mr-2 font-bold text-primary'><NavLink to="myportfolio">MY PORTFOLIO</NavLink></li>
+        
 
         {
             user? <button className='btn btn-primary ' onClick={handleSignOut}>Sign Out</button>:

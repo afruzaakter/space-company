@@ -12,6 +12,8 @@ import SignUp from './Components/Pages/Auth/SignUp';
 import Reset from './Components/Pages/Auth/Reset';
 import Footer from './Components/Shared/Footer';
 import NotFound from './Components/Shared/NotFound';
+import Purchase from './Components/Pages/Purchase/Purchase';
+import RequireAuth from './Components/Pages/Auth/RequireAuth';
 
 function App() {
   return (
@@ -24,6 +26,15 @@ function App() {
        <Route path='login' element={<Login></Login>}></Route>
        <Route path='signup' element={<SignUp></SignUp>}></Route>
        <Route path='reset' element={<Reset></Reset>}></Route>
+
+       <Route path='/purchase' element={
+       <RequireAuth>
+          <Purchase></Purchase>
+       </RequireAuth>
+
+       }></Route>
+
+
        <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
     <ToastContainer />

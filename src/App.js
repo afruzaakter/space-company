@@ -8,6 +8,8 @@ import MyPortfolio from './Components/Pages/MyPortfolio';
 import Navbar from './Components/Shared/Navbar';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignUp from './Components/Pages/Auth/SignUp';
+import Reset from './Components/Pages/Auth/Reset';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
        <Route path='blogs' element={<Blogs></Blogs>}></Route>
        <Route path='myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
        <Route path='login' element={<Login></Login>}></Route>
+       <Route path='signup' element={<SignUp></SignUp>}></Route>
+       <Route path='reset' element={<Reset></Reset>}></Route>
     </Routes>
     <ToastContainer />
     </div>

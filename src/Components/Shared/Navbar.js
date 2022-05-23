@@ -1,13 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import Loading from './Loading';
 import logo from '../../assets/images/logo.png'
+import useParts from '../../hooks/useParts';
 
 const Navbar = () => {
     const [user, loading] = useAuthState(auth);
+ 
+    const {id} = useParams();
     if(loading){
         return <Loading></Loading>
     }
@@ -16,14 +19,23 @@ const Navbar = () => {
     }
     const menuItem = <>
         <li className='mr-2 font-bold text-primary '><NavLink to="/">HOME</NavLink></li>
-        <li className='mr-2 font-bold text-primary'><NavLink to="purchase">PURCHASE</NavLink></li>
+        {
+            user && <>
+            <li className='mr-2 font-bold text-primary'><NavLink to={`/purchase/${id}`}>PURCHASE</NavLink></li>
+            </>
+        }
+        {
+            user && <>
+            <li className='mr-2 font-bold text-primary'><NavLink to='/dashboard'>DASHBOARD</NavLink></li>
+            </>
+        }
         <li className='mr-2 font-bold text-primary'><NavLink to="blogs">BLOGS</NavLink></li>
         <li className='mr-2 font-bold text-primary'><NavLink to="myportfolio">MY PORTFOLIO</NavLink></li>
         
 
         {
             user? <button className='btn btn-primary ' onClick={handleSignOut}>Sign Out</button>:
-            <li className='mr-2'><NavLink to="login">LOGIN</NavLink></li>
+            <li className='mr-2 text-primary font-bold'><NavLink to="login">LOGIN</NavLink></li>
         }
       
 

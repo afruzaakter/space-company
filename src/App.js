@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import './App.css';
 import Login from './Components/Pages/Auth/Login';
 import Blogs from './Components/Pages/Blogs';
@@ -14,8 +14,10 @@ import Footer from './Components/Shared/Footer';
 import NotFound from './Components/Shared/NotFound';
 import Purchase from './Components/Pages/Purchase/Purchase';
 import RequireAuth from './Components/Pages/Auth/RequireAuth';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
 
 function App() {
+  
   return (
     <div>
     <Navbar></Navbar>
@@ -27,13 +29,21 @@ function App() {
        <Route path='signup' element={<SignUp></SignUp>}></Route>
        <Route path='reset' element={<Reset></Reset>}></Route>
 
-       <Route path='/purchase' element={
+       <Route path='/purchase/:id' element={
        <RequireAuth>
           <Purchase></Purchase>
        </RequireAuth>
 
        }></Route>
+       {/* //dashboard route  start */}
+       <Route path='/dashboard' element={
+       <RequireAuth>
+          <Dashboard></Dashboard>
+       </RequireAuth>
 
+       }></Route>
+
+      {/* //dashboard route  start */}       
 
        <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>

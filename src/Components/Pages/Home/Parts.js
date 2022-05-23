@@ -4,7 +4,7 @@ import SingleParts from './SingleParts';
 
 const Parts = () => {
     const [parts, setParts] = useParts();
-    console.log(parts);
+    // console.log(parts);
 
     return (
         <div>

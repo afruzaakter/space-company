@@ -15,6 +15,9 @@ import NotFound from './Components/Shared/NotFound';
 import Purchase from './Components/Pages/Purchase/Purchase';
 import RequireAuth from './Components/Pages/Auth/RequireAuth';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import MyOrders from './Components/Pages/Dashboard/MyOrders';
+import AddReviews from './Components/Pages/Dashboard/AddReviews';
+import MyProfile from './Components/Pages/Dashboard/MyProfile';
 
 function App() {
   
@@ -41,7 +44,13 @@ function App() {
           <Dashboard></Dashboard>
        </RequireAuth>
 
-       }></Route>
+       }>
+          
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='addreviews' element={<AddReviews></AddReviews>}></Route>
+          <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
+
+       </Route>
 
       {/* //dashboard route  start */}       
 

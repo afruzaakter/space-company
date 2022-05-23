@@ -1,10 +1,22 @@
-# Getting Started with Create React App
+# Auto Store
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Description:
 
-In the project directory, you can run:
+.At first select project name and create client side and server side folder.\
+.Client side: firebase install , component create, login and signup page design.\
+.Firebase hook install, email , password and Google authentication setup.\
+.Home page Design , Tailwind and daisyUI install, fontawasome install etc.\
+.Server side: Server side folder create and install mongodb, express, cors and dotenv file.\
+Use Frameworks:\
+.Tailwind/CSS\
+.DaisyUI\
+.React\
+.React-Router-Dom\
+.React-firebase hook\
+.React hook form\
+.react-toastify etc\
 
 ### `npm start`
 

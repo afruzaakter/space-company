@@ -5,7 +5,6 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import '../../../Components/Style/Style.css';
 import Google from '../../../assets/images/google.png';
 import auth from '../../../firebase.init';
-import { signInWithEmailAndPassword } from 'firebase/auth';
 import Loading from '../../Shared/Loading';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);

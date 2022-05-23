@@ -1,12 +1,15 @@
 import React from 'react';
-import Footer from '../../Shared/Footer';
-import Navbar from '../../Shared/Navbar';
+import Banner from './Banner';
+import Brands from './Brands';
+import Parts from './Parts';
 
 const Home = () => {
     return (
         <div>
-            <h1>This is home page</h1>
-
+            <Banner></Banner>
+            <Parts></Parts>
+            <Brands></Brands>
+            
            
           
         </div>

@@ -5,6 +5,44 @@ import bg2 from '../../assets/images/-project-2.jpg';
 const MyProject = () => {
     return (
         <div>
+
+            <h1 className='text-3xl text-primary font-bold text-center'>Technologies or Skills</h1>
+            {/* <div className='text-center'> */}
+                
+                
+            <div class="carousel carousel-end mt-5 mb-5  bg-primary rounded-box">
+                <div class="carousel-item flex  flex-col text-white  ml-28 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-html5"></i> </h1>
+                <p className='text-xl'>HTML</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-css3-alt"></i> </h1>
+                <p className='text-xl'>CSS</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-bootstrap"></i> </h1>
+                <p className='text-xl'>Bootstrap</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-html5"></i> </h1>
+                <p className='text-xl'>Tailwindcss</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-react"></i> </h1>
+                <p className='text-xl'>React</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-node-js"></i> </h1>
+                <p className='text-xl'>Node.js</p>
+                </div>
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <h1 className='text-6xl' ><i class="fab fa-html5"></i> </h1>
+                <p className='text-xl'>Mongodb</p>
+                </div>
+               
+            {/* </div> */}
+            </div>
+
             <h1 className='text-3xl text-primary font-bold text-center'>My Project</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 <div class="card w-96 bg-base-100 shadow-xl">

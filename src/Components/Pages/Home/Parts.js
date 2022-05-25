@@ -1,5 +1,6 @@
 import React from 'react';
 import useParts from '../../../hooks/useParts';
+import Purchase from '../Purchase/Purchase';
 import SingleParts from './SingleParts';
 
 const Parts = () => {
@@ -23,6 +24,10 @@ const Parts = () => {
                     </SingleParts>)
                 }
             </div>
+
+           
+
+
         </div>
     );
 };

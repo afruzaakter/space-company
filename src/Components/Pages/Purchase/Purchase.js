@@ -1,8 +1,8 @@
 import React,{useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
 const Purchase = () => {
-    const [products, setProducts] = useState([]);
+     const [products, setProducts] = useState([]);
     console.log(products);
     const {id} = useParams()
     useEffect(() =>{
@@ -24,9 +24,15 @@ const Purchase = () => {
                         <h1 className="font-bold">Available Quantity: <span className='text-xl text-primary font-bold'>{products.availableQuantity} Ps</span> </h1>
 
                         <p className="py-6">{products.description}</p>
-                        <button className="btn btn-primary">Purchase</button>
+
+                       
+                      <Link to={`/productdetails/${products._id}`}>
+                      <button className="btn btn-primary">Purchase</button>
+                      </Link>
+                       
                     </div>
                 </div>
+
             </div>
         </div>
     );

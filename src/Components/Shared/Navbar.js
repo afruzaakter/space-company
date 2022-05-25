@@ -11,6 +11,7 @@ const Navbar = () => {
     const [user, loading] = useAuthState(auth);
  
     const {id} = useParams();
+    
     if(loading){
         return <Loading></Loading>
     }
@@ -19,11 +20,7 @@ const Navbar = () => {
     }
     const menuItem = <>
         <li className='mr-2 font-bold text-primary '><NavLink to="/">HOME</NavLink></li>
-        {
-            user && <>
-            <li className='mr-2 font-bold text-primary'><NavLink to={`/purchase/${id}`}>PURCHASE</NavLink></li>
-            </>
-        }
+       
         {
             user && <>
             <li className='mr-2 font-bold text-primary'><NavLink to='/dashboard'>DASHBOARD</NavLink></li>

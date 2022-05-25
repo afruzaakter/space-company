@@ -18,6 +18,7 @@ import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MyOrders from './Components/Pages/Dashboard/MyOrders';
 import AddReviews from './Components/Pages/Dashboard/AddReviews';
 import MyProfile from './Components/Pages/Dashboard/MyProfile';
+import ProductDetails from './Components/Pages/Purchase/ProductDetails';
 
 function App() {
   
@@ -35,6 +36,12 @@ function App() {
        <Route path='/purchase/:id' element={
        <RequireAuth>
           <Purchase></Purchase>
+       </RequireAuth>
+
+       }></Route>
+       <Route path='/productdetails/:id' element={
+       <RequireAuth>
+          <ProductDetails></ProductDetails>
        </RequireAuth>
 
        }></Route>

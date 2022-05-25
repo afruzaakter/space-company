@@ -32,6 +32,7 @@ const Purchase = () => {
                        
                     </div>
                 </div>
+              
 
             </div>
         </div>

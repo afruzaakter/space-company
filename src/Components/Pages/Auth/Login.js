@@ -6,6 +6,7 @@ import '../../../Components/Style/Style.css';
 import Google from '../../../assets/images/google.png';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
+import useToken from '../../../hooks/useToken';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -16,7 +17,7 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-    //   const [token] = useToken(user || gUser);
+      const [token] = useToken(user || gUser);
 
       let signInError;
       const location = useLocation();
@@ -28,7 +29,7 @@ const Login = () => {
             navigate(from, { replace: true });
             // navigate('/')
         }
-      },[user || gUser]);
+      },[user || gUser ]);
    
 
       if(error || gError){

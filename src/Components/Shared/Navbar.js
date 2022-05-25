@@ -17,6 +17,7 @@ const Navbar = () => {
     }
     const handleSignOut = () =>{
         signOut(auth);
+        localStorage.removeItem('accessToken');
     }
     const menuItem = <>
         <li className='mr-2 font-bold text-primary '><NavLink to="/">HOME</NavLink></li>

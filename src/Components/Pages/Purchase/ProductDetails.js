@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { toast} from 'react-toastify';
 
 const ProductDetails = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+   
   
     const [user, loading] = useAuthState(auth);
+    const navigate = useNavigate()
+   const [services, setServices] = useState([])
+    // console.log(services);
+    const {id} = useParams()
+    useEffect(() =>{
+          const url = `http://localhost:5000/service/${id}`
+          console.log("purchase id",url);
+          fetch(url)
+          .then(res => res.json())
+          .then(data => setServices(data))
+    }, [])
+
+
     const onSubmit = data =>{
-        // console.log(e);
-       
-    //    const phone = data.phone;
-    //    const address = data.address;
-    //    const quantity = data.quantity;
-    //    const phone = data.phone;
-    //  const purchase = { phone,address, quantity};
-    
-    //    console.log(data.phone);
-    
-   
-        const purchase = {
-            userName: user?.displayName,
+    const purchase = {
+            Name: services.name,
             userEmail: user?.email,
-            address: data.address,
-            phone:data.phone,
-           quantity: data.quantity
+            img: services.img,
+            price:services.price,
+           quantity: data.quantity,
+           
         }
         console.log(purchase);
         fetch('http://localhost:5000/purchase', {
@@ -42,6 +46,12 @@ const ProductDetails = () => {
         toast.success('Purchase is successfully')
 
     })
+
+       
+ 
+
+
+    
     }
     
    
@@ -58,8 +68,8 @@ const ProductDetails = () => {
                 <div className="form-control w-full max-w-xs mb-3">
                     <input 
                     type="text"
-                     value={user?.displayName || ' '}
-                     
+                     value={services.name}
+                     disabled
                     className="input  w-full max-w-xs login-container-input"
                 
                      />
@@ -72,74 +82,56 @@ const ProductDetails = () => {
                      disabled
                      value={user?.email || ' '}
                     className="input  w-full max-w-xs login-container-input"
-                  
+                   
                      />
                     
                 </div>
+                
                 {/* Address field  */}
                 <div className="form-control w-full max-w-xs">
                     <input 
                     type="text"
-                     placeholder="Address"
+                    value= {services.img}
                     //  value={user?.address}
-                    name="address"
-                    className="input  w-full max-w-xs login-container-input"
-                    {...register("address",{
-                        required:{
-                            value: ' ',
-                            message: "❌ Address is Required"
-                        }
                    
-                      
-                      })}
+                    className="input  w-full max-w-xs login-container-input"
+                    disabled
                      />
-                    <label className="label">
-                    {errors.address?.type === 'required' && <span className="label-text-alt text-red-700">{errors.address.message}</span>}
                     
-                    </label>
                 </div>
                 <div className="form-control w-full max-w-xs">
+                    <label className='font-bold mb-3 mt-2' htmlFor="">Price</label>
                     <input 
                     type="tel"
                      placeholder="Phone Number"
-                     name="phone"
-                    className="input  w-full max-w-xs login-container-input"
-                    {...register("phone",{
-                        required:{
-                            value: ' ',
-                            message: "❌ Phone Number is Required"
-                        },
-                        
-                        
-                        
-                      })}
+                     value={services.price}
+                    className="input mb-5  w-full max-w-xs login-container-input"
+                    required
+
                      />
-                    <label className="label">
-                    {errors.phone?.type === 'required' && <span className="label-text-alt text-red-700">{errors.phone.message}</span>}
                    
-                        
-                      
-                    </label>
                 </div>
+              
                 <div className="form-control w-full max-w-xs">
+                    <label className='mb-2 '>Please Order</label>
                     <input 
                     type="number"
-                     placeholder="Minimun Order 50ps"
+                     placeholder="Min.Order 50ps & Max.Order 1000ps"
                      name="quantity"
                     className="input  w-full max-w-xs login-container-input"
                     {...register("quantity",{
                         required:{
                             value: ' ',
-                            message: "❌ Minimum order 11 px and Maximum order 100px"
+                            message: "❌ Minimum order 50 ps and Maximum order 1000ps"
                         },
                         max:{
                             value: 1000,
-                            message: " Maximum order 100ps"
+                            message: " Maximum order 1000ps"
                         },
                        
                         min: {
                           value: 50,
-                          message: '❌ Minimum order 11 px' 
+                          message: '❌ Minimum order 50 px' 
                         }
                       })}
                      />

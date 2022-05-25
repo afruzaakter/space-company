@@ -6,9 +6,11 @@ import Google from '../../../assets/images/google.png';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
+import useToken from '../../../hooks/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+   
     // google authentication 
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     //email password authentication
@@ -18,7 +20,7 @@ const SignUp = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
-
+      const [token] = useToken(user || gUser );
       //update profile
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
       const navigate= useNavigate()
@@ -29,8 +31,14 @@ const SignUp = () => {
       }
 
       if(user || gUser ){
+        //   console.log(user || gUser);
           navigate('/');
       }
+
+    //   if(token ){
+    //     //   console.log(user || gUser);
+    //       navigate('/home');
+    //   }
 
       let signUpError;
       
@@ -119,7 +127,7 @@ const SignUp = () => {
                     </label>
                 </div>
                 {signUpError}
-                <input className='btn w-full btn-primary text-white text-xl max-w-xs' type="submit" value='Login' />  
+                <input className='btn w-full btn-primary text-white text-xl max-w-xs' type="submit" value='Sign Up' />  
                 </form>
                 <p>Already have an account?<Link className='text-primary font-bold' to="/login">Login</Link> </p>
                 <p>Forgot Password? <Link className='text-primary font-bold' to="/reset">Reset Password</Link> </p>

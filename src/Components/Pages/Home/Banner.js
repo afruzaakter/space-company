@@ -1,5 +1,5 @@
 import React from 'react';
-import slider1 from '../../../assets/images/banner-3.jpg'
+import slider1 from '../../../assets/images/banner-1 (1).jpg'
 import slider2 from '../../../assets/images/bannerslider-3.jpg'
 
 const Banner = () => {

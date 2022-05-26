@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import OrderTable from './OrderTable';
 
@@ -10,13 +9,18 @@ const MyOrders = () => {
     console.log(orders);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase?order=${user.email}`)
+            fetch(`http://localhost:5000/purchase?order=${user.email}`,{
+                method: 'GET',
+                headers:{
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
                 .then(res => res.json())
                 .then(data => setOrders(data));
         }
     }, [user])
   
-const {id} = useParams()
+
        //delete my item part
        const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?')
@@ -71,7 +75,7 @@ const {id} = useParams()
                                     <td>$ {order.price}</td>
                                     <td>{order.quantity} Ps</td>
                                     <td>
-                                    <button onClick={() => handleDelete(order._id)} className='btn btn-danger' >Delete</button>
+                                    <button onClick={() => handleDelete(order._id)} className='btn btn-primary' >Cancel</button>
                                     </td>
                                 </tr>
                             )

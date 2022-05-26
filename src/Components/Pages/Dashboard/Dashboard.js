@@ -20,6 +20,7 @@ const Dashboard = () => {
                         <li className='my-5'><NavLink to='/dashboard'>My Orders</NavLink></li>
                         <li><NavLink to='/dashboard/addreviews'>Add Reviews</NavLink></li>
                         <li><NavLink to='/dashboard/myprofile'>My Profile</NavLink></li>
+                        <li><NavLink to='/dashboard/makeadmin'>Make Admin</NavLink></li>
                        
                     </ul>
 

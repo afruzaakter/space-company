@@ -25,11 +25,11 @@ const Login = () => {
       let from = location.state?.from?.pathname || "/";
 
       useEffect( () =>{
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
             // navigate('/')
         }
-      },[user || gUser ]);
+      },[token, from, navigate ]);
    
 
       if(error || gError){

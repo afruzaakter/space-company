@@ -22,6 +22,7 @@ const ProductDetails = () => {
           .then(data => setServices(data))
     }, [])
 
+  
 
     const onSubmit = data =>{
     const purchase = {
@@ -44,13 +45,9 @@ const ProductDetails = () => {
     .then(data => {
         // console.log(data);
         toast.success('Purchase is successfully')
+        navigate('/dashboard');
 
     })
-
-       
- 
-
-
     
     }
     

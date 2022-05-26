@@ -21,6 +21,7 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
       const [token] = useToken(user || gUser );
+      console.log(token)
       //update profile
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
       const navigate= useNavigate()
@@ -30,15 +31,15 @@ const SignUp = () => {
           return <Loading></Loading>
       }
 
-      if(user || gUser ){
-        //   console.log(user || gUser);
-          navigate('/');
-      }
-
-    //   if(token ){
-    //     //   console.log(user || gUser);
-    //       navigate('/home');
+    //   if(user || gUser ){
+    //       console.log(user || gUser);
+    //       navigate('/');
     //   }
+
+      if(token ){
+        //   console.log(user || gUser);
+          navigate('/home');
+      }
 
       let signUpError;
       

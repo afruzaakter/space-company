@@ -28,7 +28,7 @@ const MyProject = () => {
                 <p className='text-xl'>Tailwindcss</p>
                 </div>
                 <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
-                <h1 className='text-6xl' ><i class="fab fa-react"></i> </h1>
+                <h1 className='text-6xl' ><i class="fab fa-js"></i> </h1>
                 <p className='text-xl'>JavaScript</p>
                 </div>
                 <div class="carousel-item flex  flex-col text-white  ml-5 p-6">

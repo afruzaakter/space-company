@@ -21,7 +21,7 @@ const {id} = useParams()
        const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/purchase?${id}`
+            const url = `http://localhost:5000/purchase/${id}`
             console.log(url);
 
             fetch(url, {
@@ -30,7 +30,7 @@ const {id} = useParams()
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    const remaining = orders.filter(service => service._id !== id)
+                    const remaining = orders.filter(order => order._id !== id)
                     setOrders(remaining);
                 })
 
@@ -68,9 +68,10 @@ const {id} = useParams()
                                     <td>
                                         <img className='w-10' src={order.img} alt="" />
                                     </td>
-                                    <td>{order.quantity}</td>
+                                    <td>$ {order.price}</td>
+                                    <td>{order.quantity} Ps</td>
                                     <td>
-                                    <button onClick={() => handleDelete(id)} className='btn btn-danger' >Delete</button>
+                                    <button onClick={() => handleDelete(order._id)} className='btn btn-danger' >Delete</button>
                                     </td>
                                 </tr>
                             )

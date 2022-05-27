@@ -6,7 +6,7 @@ import OrderTable from './OrderTable';
 const MyOrders = () => {
     const [user, loading] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
-    console.log(orders);
+    // console.log(orders);
     useEffect(() => {
         if (user) {
             fetch(`http://localhost:5000/purchase?order=${user.email}`,{
@@ -33,7 +33,7 @@ const MyOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     const remaining = orders.filter(order => order._id !== id)
                     setOrders(remaining);
                 })

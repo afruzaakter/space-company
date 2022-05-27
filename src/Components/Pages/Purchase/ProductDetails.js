@@ -16,7 +16,7 @@ const ProductDetails = () => {
     const {id} = useParams()
     useEffect(() =>{
           const url = `http://localhost:5000/service/${id}`
-          console.log("purchase id",url);
+        //   console.log("purchase id",url);
           fetch(url)
           .then(res => res.json())
           .then(data => setServices(data))
@@ -33,7 +33,7 @@ const ProductDetails = () => {
            quantity: data.quantity,
            
         }
-        console.log(purchase);
+        // console.log(purchase);
         fetch('http://localhost:5000/purchase', {
         method: 'POST',
         headers:{

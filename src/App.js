@@ -20,6 +20,7 @@ import AddReviews from './Components/Pages/Dashboard/AddReviews';
 import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import ProductDetails from './Components/Pages/Purchase/ProductDetails';
 import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin';
+import EditProfile from './Components/Pages/Dashboard/EditProfile';
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
        <Route path='login' element={<Login></Login>}></Route>
        <Route path='signup' element={<SignUp></SignUp>}></Route>
        <Route path='reset' element={<Reset></Reset>}></Route>
+       <Route path='/editprofile' element={<EditProfile></EditProfile>}></Route>
 
        <Route path='/purchase/:id' element={
        <RequireAuth>
@@ -59,6 +61,8 @@ function App() {
           <Route path='addreviews' element={<AddReviews></AddReviews>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
+         
+        
 
        </Route>
 

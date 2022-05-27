@@ -3,11 +3,10 @@ import { Link, useParams } from 'react-router-dom';
 import ProductDetails from './ProductDetails';
 const Purchase = () => {
      const [products, setProducts] = useState([]);
-    console.log(products);
+    // console.log(products);
     const {id} = useParams()
     useEffect(() =>{
           const url = `http://localhost:5000/service/${id}`
-          console.log("purchase id",url);
           fetch(url)
           .then(res => res.json())
           .then(data => setProducts(data))

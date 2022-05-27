@@ -1,30 +1,41 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-
-
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading';
 
-const MyProfile = () => {
+const EditProfile = () => {
     const [user, loading] = useAuthState(auth);
-    console.log(user);
-
-
+    if (loading) {
+        return <Loading></Loading>
+    }
     return (
         <div className="hero  bg-base-200">
             <div className=" flex justify-around items-start ">
-               <div className='mt-36'>
-               <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
-               <img src={user?.photoURL} className="max-w-sm rounded-full shadow-2xl" />
-                    
-                     <Link to="/editprofile" className='btn flex btn-primary mt-5 btn-sm'>
-                     <div className='flex gap-1'>
-                      <span>Edit</span>
-                      <span>profile</span>
-                      </div>
-                     </Link>
-               </div>
-               
+                <div className='mt-36'>
+                    <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
+                    {/* <img src="" className="max-w-sm rounded-lg shadow-2xl" />
+                */}
+                    <div class="avatar online">
+                        <div class="w-24 rounded-full">
+                            <img src="https://api.lorem.space/image/face?hash=28212" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <input className='hidden' id='ProfilePhoto' name='ProfilePhoto' type="file" />
+                        <label for="ProfilePhoto" className='btn flex btn-primary mt-5 btn-sm' >
+
+                            <div className='flex gap-1'>
+                                <span>Update</span>
+                                <span>photo</span>
+                            </div>
+                        </label>
+                    </div>
+
+                 
+                </div>
+
                 {/* //////// */}
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
@@ -48,16 +59,17 @@ const MyProfile = () => {
                                         <span className="label-text">Address</span>
                                     </label>
                                     <input type="text" placeholder="Address" className="input input-bordered" />
-                                   
+
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Phone Number</span>
                                     </label>
                                     <input type="text" placeholder="Phone Number" className="input input-bordered" />
-                                   
+
                                 </div>
-                                
+                                <button className='btn btn-primary btn-sm'>Save Change</button>
+
                             </div>
                         </div>
                     </div>
@@ -68,4 +80,4 @@ const MyProfile = () => {
     );
 };
 
-export default MyProfile;
+export default EditProfile;

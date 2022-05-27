@@ -1,12 +1,13 @@
 import React from 'react';
-import banner from '../../assets/images/blogbanner.jpg';
+import blogs from '../../assets/images/about.png';
+
 const Blogs = () => {
     return (
         <section>
             <div className='m-16 mt-28 mx-auto ml-28'>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="flex justify-around gap-5 items-start  flex-col lg:flex-row">
-                        <img src="https://api.lorem.space/image/movie?w=360&h=590" className="max-w-sm rounded-lg shadow-2xl" alt=" " />
+                       
                         <div className=''>
                             <h1 className="text-5xl font-bold">Blogs Question and Answer</h1>
                             <div>
@@ -64,7 +65,9 @@ const Blogs = () => {
                                     Q-4:What is a unit test? Why should write unit tests?
                                 </div>
                                 <div className="collapse-content">
-                                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                                    <p>Answer:Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually and independently scrutinized for proper operation
+                                    One of the benefits of unit tests is that they isolate a function, class or method and only test that piece of code. Higher quality individual components create overall system resiliency. Thus, the result is reliable code. Unit tests also change the nature of the debugging process 
+                                    </p>
                                 </div>
                             </div>
                             <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
@@ -73,7 +76,11 @@ const Blogs = () => {
                                 </div>
                                 <div className="collapse-content">
                                     <p>
-                                       Answer: 
+                                       You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?
+                                       <ul>
+                                           <li>1. Data Pass</li>
+                                           <li>1. Data Update</li>
+                                       </ul>
                                     </p>
                                 </div>
                             </div>
@@ -82,7 +89,14 @@ const Blogs = () => {
                                     Q-6:Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts
                                 </div>
                                 <div className="collapse-content">
-                                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                                <p>
+                                       Answer: 
+                                       <ul>
+                                           <li>1. Data Pass</li>
+                                           <li>2. Data Update</li>
+                                           <li>3. data use etc</li>
+                                       </ul>
+                                    </p>
                                 </div>
                             </div>
                         </div>

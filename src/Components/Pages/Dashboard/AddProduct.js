@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
 
   
         
@@ -13,8 +13,10 @@ const AddProduct = () => {
     const onSubmit = (data) =>{
         console.log(data);
 
+
       
         const url = `http://localhost:5000/service`;
+        console.log(url);
         fetch(url, {
             method: 'POST',
             headers: {
@@ -36,10 +38,10 @@ const AddProduct = () => {
                 <h2 className="text-center text-primary text-2xl font-bold mb-5">Add Product</h2>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2 p-3 border-2 border-primary rounded-md w-full' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <textarea className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Description' {...register("description")} />
+                <textarea className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Description' {...register("data")} />
                 <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Minimum Order Quantity' type="number" {...register("minimumOrderQuantity")} />
-                <input className='mb-2 w-full Available Quantity p-3 border-2 border-primary rounded-md' placeholder='Price' type="number" {...register("availableQuantity")} />
+                <input className='mb-2 w-full Available Quantity p-3 border-2 border-primary rounded-md' placeholder='Available Quantity' type="number" {...register("availableQuantity")} />
                 <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Photo URL' type="url" {...register("img")} />
                 <input className='w-full btn btn-primary' type="submit" value="Add Service" />
             </form>

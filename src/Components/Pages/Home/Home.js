@@ -3,6 +3,8 @@ import Banner from './Banner';
 import Brands from './Brands';
 import HomeSection from './HomeSection';
 import Parts from './Parts';
+// import Parts from '../../Shared/Footer';
+
 
 const Home = () => {
     return (
@@ -12,7 +14,7 @@ const Home = () => {
            
             <Brands></Brands>
             <HomeSection></HomeSection>
-           
+          
           
         </div>
     );

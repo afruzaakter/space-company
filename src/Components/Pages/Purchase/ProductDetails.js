@@ -132,7 +132,7 @@ const ProductDetails = () => {
                        
                         min: {
                           value: 50,
-                          message: '❌ Minimum order 50 px' 
+                          message: '❌ Minimum order 50 ps' 
                         }
                       })}
                      />

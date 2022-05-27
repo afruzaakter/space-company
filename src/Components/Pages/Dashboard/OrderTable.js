@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 const OrderTable = ({user,index, refetch}) => {
     
   const {email,role} = user;
+  //make admin
   const makeAdmin = () =>{
       fetch(`http://localhost:5000/user/admin/${email}`,{
           method: 'PUT',
@@ -19,6 +20,24 @@ const OrderTable = ({user,index, refetch}) => {
           toast.success(`Successfully made an admin`)           
       })
   }
+
+  //   delete user 
+ const removeUser = (id) =>{
+    const proceed = window.confirm('Are you sure?')
+    fetch(`http://localhost:5000/user/${id}`,{
+        method: 'DELETE',
+        headers:{
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+
+    })
+    .then(res => res.json())
+    .then(data =>{  
+        refetch();
+        toast.success(`Successfully Remove User`)           
+    })
+ }
+
  
     return (
         
@@ -29,7 +48,7 @@ const OrderTable = ({user,index, refetch}) => {
                            {role !== 'admin' && <button onClick={makeAdmin} className='btn btn-primary btn-sm'>Make Admin</button>}
                             </td>
                             <td>
-                            <button className='btn btn-primary btn-sm'>Remove Admin</button>
+                            <button onClick={()=>removeUser(user._id)} className='btn btn-primary btn-sm'>Remove User</button>
                             </td>
                         </tr>
       

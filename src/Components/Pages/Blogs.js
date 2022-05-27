@@ -72,7 +72,9 @@ const Blogs = () => {
                                     Q-5:You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?
                                 </div>
                                 <div className="collapse-content">
-                                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                                    <p>
+                                       Answer: 
+                                    </p>
                                 </div>
                             </div>
                             <div tabindex="0" className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">

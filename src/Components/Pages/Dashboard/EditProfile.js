@@ -11,7 +11,7 @@ const EditProfile = () => {
     }
     return (
         <div className="hero  bg-base-200">
-            <div className=" flex justify-around items-start ">
+            <div className=" flex justify-around gap-28 items-start ">
                 <div className='mt-36'>
                     <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
                     {/* <img src="" className="max-w-sm rounded-lg shadow-2xl" />
@@ -37,7 +37,7 @@ const EditProfile = () => {
                 </div>
 
                 {/* //////// */}
-                <div className="hero min-h-screen bg-base-200">
+                <div className="hero w-80 min-h-screen bg-base-200">
                     <div className="hero-content flex-col lg:flex-row-reverse">
 
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -68,6 +68,11 @@ const EditProfile = () => {
                                     <input type="text" placeholder="Phone Number" className="input input-bordered" />
 
                                 </div>
+                                <div className="form-control">
+                                   
+                                   <input type="url" placeholder="LinkedIn profile link" className="input input-bordered" />
+                                  
+                               </div>
                                 <button className='btn btn-primary btn-sm'>Save Change</button>
 
                             </div>

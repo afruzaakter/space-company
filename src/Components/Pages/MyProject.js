@@ -6,7 +6,7 @@ const MyProject = () => {
     return (
         <div>
 
-            <h1 className='text-3xl text-primary font-bold text-center'>Technologies or Skills</h1>
+            <h1 className='text-3xl text-primary font-bold text-center'>Skills Of Technologies </h1>
             {/* <div className='text-center'> */}
                 
                 

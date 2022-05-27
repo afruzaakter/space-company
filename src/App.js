@@ -22,6 +22,7 @@ import ProductDetails from './Components/Pages/Purchase/ProductDetails';
 import MakeAdmin from './Components/Pages/Dashboard/MakeAdmin';
 import EditProfile from './Components/Pages/Dashboard/EditProfile';
 import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
+import AddProduct from './Components/Pages/Dashboard/AddProduct';
 
 function App() {
   
@@ -62,6 +63,7 @@ function App() {
           <Route path='addreviews' element={<AddReviews></AddReviews>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
           <Route path='manageallorder' element={<ManageAllOrder></ManageAllOrder>}></Route>
          
         

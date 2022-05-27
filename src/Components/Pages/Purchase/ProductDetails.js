@@ -4,14 +4,18 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { toast} from 'react-toastify';
+import Loading from '../../Shared/Loading';
 
 const ProductDetails = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
    
   
     const [user, loading] = useAuthState(auth);
+   
     const navigate = useNavigate()
    const [services, setServices] = useState([])
+
+ 
     // console.log(services);
     const {id} = useParams()
     useEffect(() =>{

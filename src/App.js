@@ -39,7 +39,7 @@ function App() {
        <Route path='login' element={<Login></Login>}></Route>
        <Route path='signup' element={<SignUp></SignUp>}></Route>
        <Route path='reset' element={<Reset></Reset>}></Route>
-       <Route path='payment' element={<Payment></Payment>}></Route>
+       {/* <Route path='payment' element={<Payment></Payment>}></Route> */}
       
        <Route path='/editprofile' element={<EditProfile></EditProfile>}></Route>
 
@@ -67,6 +67,7 @@ function App() {
           <Route path='addreviews' element={<AddReviews></AddReviews>}></Route>
         
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
 
           <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
           

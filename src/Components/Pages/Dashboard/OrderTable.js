@@ -14,10 +14,18 @@ const OrderTable = ({user,index, refetch}) => {
           }
 
       })
-      .then(res => res.json())
+      .then(res => {
+          if(res.status === 403){
+              toast.error('Failed to Make an admin');
+          }
+      })
       .then(data =>{  
-          refetch();
-          toast.success(`Successfully made an admin`)           
+        if (data.modifiedCount > 0) {
+            
+            toast.success(`Successfully made an admin`);
+            refetch();
+        }   
+        console.log(data)       
       })
   }
 
@@ -33,8 +41,10 @@ const OrderTable = ({user,index, refetch}) => {
     })
     .then(res => res.json())
     .then(data =>{  
-        refetch();
-        toast.success(`Successfully Remove User`)           
+       
+            refetch();
+        toast.success(`Successfully Remove User`)  
+               
     })
  }
 

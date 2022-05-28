@@ -1,7 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink, Outlet } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import useAdmin from '../../../hooks/useAdmin';
 
 const Dashboard = () => {
+    const [user] = useAuthState(auth);
+    const [admin] =useAdmin(user);
+   
     return (
         <div className='mt-28'>
             <h1 className='text-primary font-bold text-5xl text-center'>Your Dashboard</h1>
@@ -20,11 +26,15 @@ const Dashboard = () => {
                         <li className='my-5'><NavLink to='/dashboard'>My Profile</NavLink></li>
                         <li><NavLink to='/dashboard/addreviews'>Add Reviews</NavLink></li>
                         <li><NavLink to='/dashboard/myorders'>My Orders</NavLink></li>
-                        <li><NavLink to='/dashboard/makeadmin'>Make Admin</NavLink></li>
-                        <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li>
+                       
+                        {/* <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li> */}
                         <li><NavLink to='/dashboard/addproduct'>Add Product</NavLink></li>
                         <li><NavLink to='/dashboard/allproduct'>All Product</NavLink></li>
-                       
+                         {admin && <>
+                            <li><NavLink to='/dashboard/makeadmin'>Make Admin</NavLink></li>
+                            <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li>
+                         </>
+                         }
                     </ul>
 
                 </div>

@@ -4,6 +4,7 @@ import Brands from './Brands';
 import HomeSection from './HomeSection';
 import Parts from './Parts';
 import ShowAddReview from './ShowAddReview';
+import UserExpection from './UserExpection';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Parts></Parts>
             <Brands></Brands>
+            <UserExpection></UserExpection>
             <ShowAddReview></ShowAddReview>
             <HomeSection></HomeSection>        
           

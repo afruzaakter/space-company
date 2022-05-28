@@ -49,7 +49,7 @@ const ProductDetails = () => {
     .then(data => {
         // console.log(data);
         toast.success('Purchase is successfully')
-        navigate('/dashboard');
+        navigate('/dashboard/myorders');
 
     })
     

@@ -1,13 +1,33 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading';
 
 const EditProfile = () => {
     const [user, loading] = useAuthState(auth);
+    const { register, formState: { errors }, handleSubmit } = useForm();
     if (loading) {
         return <Loading></Loading>
+    }
+
+    
+
+    const onSubmit = (data) => {
+        console.log(data);
+        const url = 'http://localhost:5000/profile'
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
     }
     return (
         <div className="hero  bg-base-200">
@@ -37,48 +57,26 @@ const EditProfile = () => {
                 </div>
 
                 {/* //////// */}
-                <div className="hero w-80 min-h-screen bg-base-200">
-                    <div className="hero-content flex-col lg:flex-row-reverse">
+                <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                    <figure class="px-10 pt-10">
+                        <img src={user?.photoURL} alt="Shoes" class="rounded-full" />
+                    </figure>
 
-                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                            <div className="card-body">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Name</span>
-                                    </label>
-                                    <input type="text" disabled value={user?.displayName} className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email Address</span>
-                                    </label>
-                                    <input type="text" disabled value={user?.email} className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Address</span>
-                                    </label>
-                                    <input type="text" placeholder="Address" className="input input-bordered" />
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">{user?.displayName}</h2>
 
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Phone Number</span>
-                                    </label>
-                                    <input type="text" placeholder="Phone Number" className="input input-bordered" />
-
-                                </div>
-                                <div className="form-control">
-                                   
-                                   <input type="url" placeholder="LinkedIn profile link" className="input input-bordered" />
-                                  
-                               </div>
-                                <button className='btn btn-primary btn-sm'>Save Change</button>
-
-                            </div>
-                        </div>
+                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Address' {...register("address")} />
+                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Phone Number' {...register("phone")} />
+                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Linkedin Profile Link' {...register("url")} />
+                       
+                        {/* <div class="card-actions">
+                            <Link to='/dashboard'>
+                            <button class="btn btn-primary">Add Review</button>
+                            </Link>
+                        </div> */}
+                        <input className='w-full btn btn-primary' type="submit" value="Save" />
                     </div>
-                </div>
+                </form>
                 {/* //// */}
             </div>
         </div>

@@ -17,9 +17,9 @@ const Dashboard = () => {
                     <label for="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 overflow-y-auto  w-48 bg-base-100 text-base-content">
                         {/* <!-- Sidebar content here --> */}
-                        <li className='my-5'><NavLink to='/dashboard'>My Orders</NavLink></li>
+                        <li className='my-5'><NavLink to='/dashboard'>My Profile</NavLink></li>
                         <li><NavLink to='/dashboard/addreviews'>Add Reviews</NavLink></li>
-                        <li><NavLink to='/dashboard/myprofile'>My Profile</NavLink></li>
+                        <li><NavLink to='/dashboard/myorders'>My Orders</NavLink></li>
                         <li><NavLink to='/dashboard/makeadmin'>Make Admin</NavLink></li>
                         <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li>
                         <li><NavLink to='/dashboard/addproduct'>Add Product</NavLink></li>

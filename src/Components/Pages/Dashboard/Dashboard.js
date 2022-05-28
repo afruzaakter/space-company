@@ -27,10 +27,11 @@ const Dashboard = () => {
                         <li><NavLink to='/dashboard/addreviews'>Add Reviews</NavLink></li>
                         <li><NavLink to='/dashboard/myorders'>My Orders</NavLink></li>
                        
-                        {/* <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li> */}
-                        <li><NavLink to='/dashboard/addproduct'>Add Product</NavLink></li>
-                        <li><NavLink to='/dashboard/allproduct'>All Product</NavLink></li>
+                       
+                       
                          {admin && <>
+                            <li><NavLink to='/dashboard/addproduct'>Add Product</NavLink></li>
+                            <li><NavLink to='/dashboard/allproduct'>All Product</NavLink></li>
                             <li><NavLink to='/dashboard/makeadmin'>Make Admin</NavLink></li>
                             <li><NavLink to='/dashboard/manageallorder'>Manage All Order</NavLink></li>
                          </>

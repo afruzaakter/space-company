@@ -4,15 +4,15 @@ import Loading from '../../Shared/Loading';
 import OrderTable from './OrderTable';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user',{
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://evening-lake-38137.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
     }).then(res => res.json()))
 
-    if(isLoading){
-        return<Loading></Loading>
+    if (isLoading) {
+        return <Loading></Loading>
     }
     return (
         <div>
@@ -29,19 +29,19 @@ const MakeAdmin = () => {
                         </tr>
                     </thead>
                     <tbody>
-                      
-                       {
-                           users?.map((user,index) =><OrderTable
-                            key={user._id}
-                               user = {user}
-                               index={index}
-                               refetch={refetch}
-                           >   
-                           </OrderTable> )
-                       }
 
-                  
-                      
+                        {
+                            users?.map((user, index) => <OrderTable
+                                key={user._id}
+                                user={user}
+                                index={index}
+                                refetch={refetch}
+                            >
+                            </OrderTable>)
+                        }
+
+
+
                     </tbody>
                 </table>
             </div>

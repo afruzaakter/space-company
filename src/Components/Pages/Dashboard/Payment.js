@@ -9,18 +9,18 @@ const Payment = () => {
     const [user] = useAuthState(auth);
     const [payments, setPayments] = useState([]);
     console.log(payments);
-    const {id} = useParams()
-    useEffect(() =>{
-          const url = `http://localhost:5000/purchase/${id}`
-       console.log(url);
-          fetch(url)
-          .then(res => res.json())
-          .then(data => setPayments(data))
+    const { id } = useParams()
+    useEffect(() => {
+        const url = `https://evening-lake-38137.herokuapp.com/purchase/${id}`
+        console.log(url);
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setPayments(data))
     }, [])
     return (
         <div>
 
-          
+
             <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                 <div class="card-body">
                     <p className="text-success text-xl font-bold">Hello, {user?.displayName}</p>
@@ -28,14 +28,14 @@ const Payment = () => {
                     <p className='text-xl font-bold'>Please pay: $ {payments.price}</p>
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100"> 
-                 <div class="card-body">
+            <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
+                <div class="card-body">
                     {/* <Elements stripe={stripePromise}>
                         <CheckoutForm appointment={appointment} />
                     </Elements> */}
-                </div> 
+                </div>
             </div>
-        </div> 
+        </div>
     );
 };
 

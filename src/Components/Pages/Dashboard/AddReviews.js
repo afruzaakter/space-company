@@ -12,12 +12,12 @@ const AddReviews = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://evening-lake-38137.herokuapp.com/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);
 
-   
+
     if (loading) {
         return <Loading></Loading>
     }
@@ -28,7 +28,7 @@ const AddReviews = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        const url = 'http://localhost:5000/review'
+        const url = 'https://evening-lake-38137.herokuapp.com/review'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -58,14 +58,14 @@ const AddReviews = () => {
                         <textarea className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Description' {...register("description")} />
                         <div class="card-actions">
                             <Link to='/home'>
-                            <button class="btn btn-primary">Add Review</button>
+                                <button class="btn btn-primary">Add Review</button>
                             </Link>
                         </div>
                     </div>
                 </form>
             </div>
 
-           
+
         </div>
     );
 };

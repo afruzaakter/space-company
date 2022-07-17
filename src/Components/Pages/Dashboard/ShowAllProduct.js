@@ -14,7 +14,7 @@ const ShowAllProduct = ({part}) => {
                     <p>{description}</p>
                     <h2 class="card-title">Price: $ {price}</h2>
                     <h2 class="">Available Quantity: {availableQuantity}</h2>
-                    <h2 class="">Minimum Order Quantity Quantity: {minimumOrderQuantity}</h2>
+                    <h2 class="">Minimum Order Quantity : {minimumOrderQuantity}</h2>
                     <div class="card-actions">
                     <Link to={`/productdetails/${part._id}`}>
                       <button className="btn btn-primary">Purchase</button>

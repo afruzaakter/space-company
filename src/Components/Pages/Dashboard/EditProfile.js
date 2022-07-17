@@ -12,11 +12,11 @@ const EditProfile = () => {
         return <Loading></Loading>
     }
 
-    
+
 
     const onSubmit = (data) => {
         console.log(data);
-        const url = 'http://localhost:5000/profile'
+        const url = 'https://evening-lake-38137.herokuapp.com/profile'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -30,17 +30,18 @@ const EditProfile = () => {
             })
     }
     return (
-        <div className="hero  bg-base-200">
-            <div className=" flex justify-around gap-28 items-start ">
+        <div className="hero    bg-base-200">
+            <div className=" sm:flex sm:flex-col-reverse lg:flex  lg:justify-around lg:flex-row-reverse gap-28 items-start ">
                 <div className='mt-36'>
-                    <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
-                    {/* <img src="" className="max-w-sm rounded-lg shadow-2xl" />
-                */}
+                  <div>
+                  <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
+                 
                     <div class="avatar online">
                         <div class="w-24 rounded-full">
                             <img src="https://api.lorem.space/image/face?hash=28212" />
                         </div>
                     </div>
+                  </div>
 
                     <div>
                         <input className='hidden' id='ProfilePhoto' name='ProfilePhoto' type="file" />
@@ -53,10 +54,11 @@ const EditProfile = () => {
                         </label>
                     </div>
 
-                 
+
                 </div>
 
-                {/* //////// */}
+                <div>
+                    {/* //////// */}
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <figure class="px-10 pt-10">
                         <img src={user?.photoURL} alt="Shoes" class="rounded-full" />
@@ -68,7 +70,7 @@ const EditProfile = () => {
                         <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Address' {...register("address")} />
                         <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Phone Number' {...register("phone")} />
                         <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Linkedin Profile Link' {...register("url")} />
-                       
+
                         {/* <div class="card-actions">
                             <Link to='/dashboard'>
                             <button class="btn btn-primary">Add Review</button>
@@ -78,6 +80,7 @@ const EditProfile = () => {
                     </div>
                 </form>
                 {/* //// */}
+                </div>
             </div>
         </div>
     );

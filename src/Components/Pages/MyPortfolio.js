@@ -40,7 +40,7 @@ const MyPortfolio = () => {
                                             <tr>
                                                 <th>B.Sc (Hon’s)</th>
                                                 <td>University of South Asia</td>
-                                                <td>Bachelor Science of Computer Engineering </td>
+                                                <td>B.Sc in Computer Science & Engineering </td>
                                                 <td>3.83 Out of 4.00 </td>
                                                 <td>2021</td>
                                             </tr>

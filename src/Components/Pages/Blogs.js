@@ -77,10 +77,12 @@ const Blogs = () => {
                                 <div className="collapse-content">
                                     <p>
                                        You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?
-                                       <ul>
-                                           <li>1. Data Pass</li>
-                                           <li>1. Data Update</li>
-                                       </ul>
+                                       {/* <p>
+                                           const products = [
+                                               { "name" :"BF GOODRICH ALL-TERRAIN KO"},
+                                               { "price":98}
+                                           ]
+                                       </p> */}
                                     </p>
                                 </div>
                             </div>

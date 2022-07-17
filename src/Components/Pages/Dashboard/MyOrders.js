@@ -10,9 +10,9 @@ const MyOrders = () => {
     // console.log(orders);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase?order=${user.email}`,{
+            fetch(`https://evening-lake-38137.herokuapp.com/purchase?order=${user.email}`, {
                 method: 'GET',
-                headers:{
+                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
@@ -20,13 +20,13 @@ const MyOrders = () => {
                 .then(data => setOrders(data));
         }
     }, [user])
-  
 
-       //delete my item part
-       const handleDelete = (id) => {
+
+    //delete my item part
+    const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/purchase/${id}`
+            const url = `https://evening-lake-38137.herokuapp.com/purchase/${id}`
             console.log(url);
 
             fetch(url, {
@@ -65,10 +65,10 @@ const MyOrders = () => {
                     <tbody>
 
                         {
-                            orders.map((order,index) =>
+                            orders.map((order, index) =>
 
                                 <tr>
-                                    <th>{index+1}</th>
+                                    <th>{index + 1}</th>
                                     <td>{order.Name}</td>
                                     <td>{user.email}</td>
                                     <td>
@@ -76,13 +76,13 @@ const MyOrders = () => {
                                     </td>
                                     <td>$ {order.price}</td>
                                     <td>{order.quantity} Ps</td>
-                            <td>
-                             {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`} className='btn btn-primary'>Pay</Link> }  
-                             {(order.price && order.paid) && <span  className='text-success'>Paid</span> }  
-                                      
-                            </td>
                                     <td>
-                                    <button onClick={() => handleDelete(order._id)} className='btn btn-primary' >Cancel</button>
+                                        {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`} className='btn btn-primary'>Pay</Link>}
+                                        {(order.price && order.paid) && <span className='text-success'>Paid</span>}
+
+                                    </td>
+                                    <td>
+                                        <button onClick={() => handleDelete(order._id)} className='btn btn-primary' >Cancel</button>
                                     </td>
                                 </tr>
                             )

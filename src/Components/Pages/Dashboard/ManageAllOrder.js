@@ -4,7 +4,7 @@ import ManageShowOrder from './ManageShowOrder';
 const ManageAllOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/purchase')
+        fetch('https://evening-lake-38137.herokuapp.com/purchase')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -13,7 +13,7 @@ const ManageAllOrder = () => {
             <h1>This is manage all order{setOrders.length}</h1>
             <div class="overflow-x-auto">
                 <table class="table w-full">
-                  
+
                     <thead>
                         <tr>
                             <th className='text-xl'>S.No</th>
@@ -25,16 +25,16 @@ const ManageAllOrder = () => {
                         </tr>
                     </thead>
                     <tbody>
-                      
-                       {
-                           orders?.map((order,index) =><ManageShowOrder
-                           key={order._id}
-                           order = {order} 
-                           index = {index} 
-                           >
-                        </ManageShowOrder>)
-                       }
-                       
+
+                        {
+                            orders?.map((order, index) => <ManageShowOrder
+                                key={order._id}
+                                order={order}
+                                index={index}
+                            >
+                            </ManageShowOrder>)
+                        }
+
                     </tbody>
                 </table>
             </div>

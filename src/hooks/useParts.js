@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 const useParts = () => {
     const [parts, setParts] = useState([]);
-    
-    useEffect(() =>{
-        fetch('http://localhost:5000/service')
-        .then(res => res.json())
-        .then(data => setParts(data))
 
-    },[])
+    useEffect(() => {
+        fetch('https://evening-lake-38137.herokuapp.com/service')
+            .then(res => res.json())
+            .then(data => setParts(data))
+
+    }, [])
 
     return [parts, setParts];
 };

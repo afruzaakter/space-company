@@ -7,8 +7,8 @@ const MyPortfolio = () => {
         <div>
             <div className="hero min-h-screen bg-base-200  ">
                 <div className="hero-content flex-col lg:flex-row border-solid border-2 border-primary mt-16 rounded-md">
-                    <img src={photo} className="max-w-sm rounded-lg shadow-2xl" alt='' />
-                    <div className='card w-96 bg-base-100 p-11 shadow-xl'>
+                    <img src={photo} className="max-w-sm rounded-lg shadow-2xl animate__animated animate__backInLeft" alt='' />
+                    <div className='card w-96 bg-base-100 p-11 shadow-xl animate__animated animate__backInRight'>
                         <h1 className=" font-bold"><span className='text-2xl text-primary font-bold'>AFRUZA AKTER SONIA</span> </h1>
                         <h1 className=" font-bold"><span className='text-1xl text-primary font-bold'>afruzaaktersonia@gmail.com</span> </h1>
                         <p>My name is Afruza akter sonia. I belong to a middle-class family from the Tangail district of Elenga. Currently, I am pursuing my Bachelor's from the University of South Asia, Dhaka.

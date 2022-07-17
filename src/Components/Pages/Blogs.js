@@ -4,7 +4,7 @@ import blogs from '../../assets/images/about.png';
 const Blogs = () => {
     return (
         <section>
-            <div className='m-16 mt-28 mx-auto ml-28'>
+            <div className='m-16 mt-20  animate__animated animate__backInDown mx-auto ml-28'>
                 <div className="hero min-h-screen bg-base-200">
                     <div className="flex justify-around gap-5 items-start  flex-col lg:flex-row">
                        

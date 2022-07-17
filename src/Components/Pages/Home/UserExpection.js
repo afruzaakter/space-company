@@ -3,7 +3,7 @@ import React from 'react';
 const UserExpection = () => {
     return (
         <div className='mt-16 mb-16 ml-60 '>
-            <h1 className='text-4xl ml-40 mb-5 font-bold text-primary'>User Expectation</h1>
+            <h1 className='text-4xl ml-40 mb-5 font-bold text-primary animate__animated animate__backInRight'>User Expectation</h1>
             <div className="stats shadow gap-6 ">
 
                 <div className="stat w-60">

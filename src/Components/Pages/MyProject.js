@@ -6,12 +6,12 @@ const MyProject = () => {
     return (
         <div>
 
-            <h1 className='text-3xl text-primary font-bold text-center'>Skills Of Technologies </h1>
+            <h1 className='text-3xl text-primary font-bold text-center animate__animated animate__backInRight'>Skills Of Technologies </h1>
             {/* <div className='text-center'> */}
                 
                 
-            <div class="carousel carousel-end mt-5 mb-5  bg-primary rounded-box">
-                <div class="carousel-item flex  flex-col text-white  ml-28 p-6">
+            <div class="carousel carousel-end mt-5 mb-5  bg-primary rounded-box m-10">
+                <div class="carousel-item flex  flex-col text-white  ml-28 p-6 animate__animated animate__backInLeft">
                 <h1 className='text-6xl' ><i class="fab fa-html5"></i> </h1>
                 <p className='text-xl'>HTML</p>
                 </div>
@@ -39,7 +39,7 @@ const MyProject = () => {
                 <h1 className='text-6xl' ><i class="fab fa-node-js"></i> </h1>
                 <p className='text-xl'>Node.js</p>
                 </div>
-                <div class="carousel-item flex  flex-col text-white  ml-5 p-6">
+                <div class="carousel-item flex  flex-col text-white  ml-5 p-6 animate__animated animate__backInRight">
                 <h1 className='text-6xl' ><i class="fab fa-html5"></i> </h1>
                 <p className='text-xl'>Mongodb</p>
                 </div>
@@ -47,9 +47,9 @@ const MyProject = () => {
             {/* </div> */}
             </div>
 
-            <h1 className='text-3xl text-primary font-bold text-center'>My Project</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                <div class="card w-96 bg-base-100 shadow-xl">
+            <h1 className='text-3xl text-primary font-bold text-center animate__animated animate__bounceInDown'>My Project</h1>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-10 '>
+                <div class="card w-96 bg-base-100 shadow-xl  animate__animated animate__backInLeft">
                     <figure class="px-10 pt-10">
                         <img src={bg} alt="Shoes"
                         
@@ -64,7 +64,7 @@ const MyProject = () => {
                        
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl animate__animated animate__bounceInDown">
                     <figure class="px-10 pt-10">
                         <img src={bg1} alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -76,7 +76,7 @@ const MyProject = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-96 bg-base-100 shadow-xl  animate__animated animate__backInRight">
                     <figure class="px-10 pt-10">
                         <img src={bg2} alt="Shoes" class="rounded-xl" />
                     </figure>

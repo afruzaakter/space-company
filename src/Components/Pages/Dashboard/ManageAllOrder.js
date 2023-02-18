@@ -4,7 +4,7 @@ import ManageShowOrder from './ManageShowOrder';
 const ManageAllOrder = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('https://evening-lake-38137.herokuapp.com/purchase')
+        fetch('https://y-psi-indol.vercel.app/purchase')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])

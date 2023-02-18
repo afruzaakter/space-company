@@ -12,7 +12,7 @@ const MyProfile = () => {
 
 
     useEffect(() => {
-        fetch('https://evening-lake-38137.herokuapp.com/profile')
+        fetch('https://y-psi-indol.vercel.app/profile')
             .then(res => res.json())
             .then(data => setprofileUser(data))
 

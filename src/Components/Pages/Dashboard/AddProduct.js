@@ -16,7 +16,7 @@ const AddProduct = () => {
 
 
 
-        const url = `https://evening-lake-38137.herokuapp.com/service`;
+        const url = `https://y-psi-indol.vercel.app/service`;
         console.log(url);
         fetch(url, {
             method: 'POST',

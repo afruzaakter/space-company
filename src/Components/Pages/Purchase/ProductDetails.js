@@ -19,7 +19,7 @@ const ProductDetails = () => {
     // console.log(services);
     const { id } = useParams()
     useEffect(() => {
-        const url = `https://evening-lake-38137.herokuapp.com/service/${id}`
+        const url = `https://y-psi-indol.vercel.app/service/${id}`
         //   console.log("purchase id",url);
         fetch(url)
             .then(res => res.json())
@@ -38,7 +38,7 @@ const ProductDetails = () => {
 
         }
         // console.log(purchase);
-        fetch('https://evening-lake-38137.herokuapp.com/purchase', {
+        fetch('https://y-psi-indol.vercel.app/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

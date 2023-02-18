@@ -12,7 +12,7 @@ const AddReviews = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     useEffect(() => {
-        fetch('https://evening-lake-38137.herokuapp.com/review')
+        fetch('https://y-psi-indol.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);
@@ -28,7 +28,7 @@ const AddReviews = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        const url = 'https://evening-lake-38137.herokuapp.com/review'
+        const url = 'https://y-psi-indol.vercel.app/review'
         fetch(url, {
             method: 'POST',
             headers: {

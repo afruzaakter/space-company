@@ -16,7 +16,7 @@ const EditProfile = () => {
 
     const onSubmit = (data) => {
         console.log(data);
-        const url = 'https://evening-lake-38137.herokuapp.com/profile'
+        const url = 'https://y-psi-indol.vercel.app/profile'
         fetch(url, {
             method: 'POST',
             headers: {
@@ -33,15 +33,15 @@ const EditProfile = () => {
         <div className="hero    bg-base-200">
             <div className=" sm:flex sm:flex-col-reverse lg:flex  lg:justify-around lg:flex-row-reverse gap-28 items-start ">
                 <div className='mt-36'>
-                  <div>
-                  <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
-                 
-                    <div class="avatar online">
-                        <div class="w-24 rounded-full">
-                            <img src="https://api.lorem.space/image/face?hash=28212" />
+                    <div>
+                        <h1 className='text-xl text-primary mb-4 '>My Profile</h1>
+
+                        <div class="avatar online">
+                            <div class="w-24 rounded-full">
+                                <img src="https://api.lorem.space/image/face?hash=28212" />
+                            </div>
                         </div>
                     </div>
-                  </div>
 
                     <div>
                         <input className='hidden' id='ProfilePhoto' name='ProfilePhoto' type="file" />
@@ -59,27 +59,27 @@ const EditProfile = () => {
 
                 <div>
                     {/* //////// */}
-                <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                    <figure class="px-10 pt-10">
-                        <img src={user?.photoURL} alt="Shoes" class="rounded-full" />
-                    </figure>
+                    <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                        <figure class="px-10 pt-10">
+                            <img src={user?.photoURL} alt="Shoes" class="rounded-full" />
+                        </figure>
 
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">{user?.displayName}</h2>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">{user?.displayName}</h2>
 
-                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Address' {...register("address")} />
-                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Phone Number' {...register("phone")} />
-                        <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Linkedin Profile Link' {...register("url")} />
+                            <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Address' {...register("address")} />
+                            <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Phone Number' {...register("phone")} />
+                            <input className='mb-2 w-full p-3 border-2 border-primary rounded-md' placeholder='Linkedin Profile Link' {...register("url")} />
 
-                        {/* <div class="card-actions">
+                            {/* <div class="card-actions">
                             <Link to='/dashboard'>
                             <button class="btn btn-primary">Add Review</button>
                             </Link>
                         </div> */}
-                        <input className='w-full btn btn-primary' type="submit" value="Save" />
-                    </div>
-                </form>
-                {/* //// */}
+                            <input className='w-full btn btn-primary' type="submit" value="Save" />
+                        </div>
+                    </form>
+                    {/* //// */}
                 </div>
             </div>
         </div>

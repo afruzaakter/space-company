@@ -7,7 +7,7 @@ const OrderTable = ({ user, index, refetch }) => {
     const { email, role } = user;
     //make admin
     const makeAdmin = () => {
-        fetch(`https://evening-lake-38137.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://y-psi-indol.vercel.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const OrderTable = ({ user, index, refetch }) => {
     //   delete user 
     const removeUser = (id) => {
         const proceed = window.confirm('Are you sure?')
-        fetch(`https://evening-lake-38137.herokuapp.com/user/${id}`, {
+        fetch(`https://y-psi-indol.vercel.app/user/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -10,7 +10,7 @@ const MyOrders = () => {
     // console.log(orders);
     useEffect(() => {
         if (user) {
-            fetch(`https://evening-lake-38137.herokuapp.com/purchase?order=${user.email}`, {
+            fetch(`https://y-psi-indol.vercel.app/purchase?order=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?')
         if (proceed) {
-            const url = `https://evening-lake-38137.herokuapp.com/purchase/${id}`
+            const url = `https://y-psi-indol.vercel.app/purchase/${id}`
             console.log(url);
 
             fetch(url, {

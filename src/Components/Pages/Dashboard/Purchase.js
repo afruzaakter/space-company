@@ -6,7 +6,7 @@ const Purchase = () => {
     // console.log(products);
     const { id } = useParams()
     useEffect(() => {
-        const url = `https://evening-lake-38137.herokuapp.com/service/${id}`
+        const url = `https://y-psi-indol.vercel.app/service/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))

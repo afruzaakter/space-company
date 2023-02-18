@@ -10,7 +10,7 @@ const ShowAddReview = ({ review }) => {
 
 
     useEffect(() => {
-        fetch('https://evening-lake-38137.herokuapp.com/review')
+        fetch('https://y-psi-indol.vercel.app/review')
             .then(res => res.json())
             .then(data => setReviews(data))
 

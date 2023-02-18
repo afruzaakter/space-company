@@ -4,7 +4,7 @@ import Loading from '../../Shared/Loading';
 import OrderTable from './OrderTable';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://evening-lake-38137.herokuapp.com/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://y-psi-indol.vercel.app/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

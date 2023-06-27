@@ -1,45 +1,23 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
-import auth from '../../firebase.init';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { signOut } from 'firebase/auth';
-import Loading from './Loading';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
-import useParts from '../../hooks/useParts';
+
 
 const Navbar = () => {
-    const [user, loading] = useAuthState(auth);
- 
-    const {id} = useParams();
     
-    if(loading){
-        return <Loading></Loading>
-    }
-    const handleSignOut = () =>{
-        signOut(auth);
-        localStorage.removeItem('accessToken');
-    }
+  
     const menuItem = <>
-        <li className='mr-2 font-bold text-secondary'><NavLink to="/">HOME</NavLink></li>
-       
-        {
-            user && <>
-            <li className='mr-2 font-bold text-secondary'><NavLink to='/dashboard'>DASHBOARD</NavLink></li>
-            </>
-        }
+        <li className='mr-2 font-bold text-secondary'><NavLink to="/">About</NavLink></li>
         <li className='mr-2 font-bold text-secondary'><NavLink to="blogs">BLOGS</NavLink></li>
         <li className='mr-2 font-bold text-secondary'><NavLink to="myportfolio">MY PORTFOLIO</NavLink></li>
         
 
-        {
-            user? <button className='btn btn-white ' onClick={handleSignOut}>Sign Out</button>:
-            <li className='mr-2 text-secondary font-bold'><NavLink to="login">LOGIN</NavLink></li>
-        }
+       
       
 
     </>
     return (
-        <div className="navbar p-5 pl-28 fixed top-0 z-40 bg-info">
+            <div className="navbar menubar p-5 pl-28 fixed top-0 z-40 bg-blue-200">
             <div className="navbar-start">
                 <div className="dropdown w-full flex justify-between  ">
                     {/* <div> <a className="btn btn-ghost normal-case text-xl">daisyUI</a> </div> */}
@@ -64,6 +42,7 @@ const Navbar = () => {
             </div>
 
         </div>
+       
     );
 };
 

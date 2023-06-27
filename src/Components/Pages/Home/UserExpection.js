@@ -1,37 +1,43 @@
 import React from 'react';
-
+import slider1 from '../../../assets/images/project 1.png'
+import slider2 from '../../../assets/images/project 2.png'
+import slider3 from '../../../assets/images/project 3.png'
 const UserExpection = () => {
     return (
-        <div className='mt-16 mb-16 ml-60 '>
-            <h1 className='text-4xl ml-40 mb-5 font-bold text-primary animate__animated animate__backInRight'>User Expectation</h1>
-            <div className="stats shadow gap-6 ">
+        <div className='mt-16 mb-16 ml-44 '>
+            {/* <h1 className='text-4xl ml-40 mb-5 font-bold text-primary animate__animated animate__backInRight'>User Expectation</h1> */}
+            <div className="stats shadow gap-6  ml">
 
-                <div className="stat w-60">
-                    <div className="stat-figure text-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-28 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <div className="stat-title">Downloads</div>
-                    <div className="stat-value">31K</div>
-                    <div className="stat-desc">Jan 1st - Feb 1st</div>
-                </div>
+            <div class="card lg:w-96 bg-base-100 shadow-xl">
+         
+              <div class="card-body">
+             <h2 class="card-title">Start Brainstorming</h2>
+               <p>Belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+    
+               </div>
+               <figure><img src={slider1} alt="Shoes" /></figure>
+           </div>
+            <div class="card mt-14 lg:w-96 bg-base-100 shadow-xl">
+         
+              <div class="card-body">
+             <h2 class="card-title">02</h2>
+             <h2 class="card-title">Validation Of Ideas</h2>
+               <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
+    
+               </div>
+               <figure><img src={slider2} alt="Shoes" /></figure>
+           </div>
+            <div class="card w-96 mt-24 bg-base-100 shadow-xl">
+         
+              <div class="card-body">
+             <h2 class="card-title">03</h2>
+             <h2 class="card-title">Discuss With Team</h2>
+               <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+    
+               </div>
+               <figure><img src={slider3} alt="Shoes" /></figure>
+           </div>
 
-                <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-                    </div>
-                    <div className="stat-title">New Users</div>
-                    <div className="stat-value">4,200</div>
-                    <div className="stat-desc">↗︎ 400 (22%)</div>
-                </div>
-
-                <div className="stat">
-                    <div className="stat-figure text-secondary">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
-                    </div>
-                    <div className="stat-title">New Registers</div>
-                    <div className="stat-value">1,200</div>
-                    <div className="stat-desc">↘︎ 90 (14%)</div>
-                </div>
 
             </div>
         </div>

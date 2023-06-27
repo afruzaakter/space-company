@@ -2,9 +2,10 @@ import React from 'react';
 import Banner from './Banner';
 import Brands from './Brands';
 import HomeSection from './HomeSection';
-import Parts from './Parts';
-import ShowAddReview from './ShowAddReview';
 import UserExpection from './UserExpection';
+import Project from './Project';
+import BestDesign from './BestDesign';
+
 
 
 
@@ -13,11 +14,11 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Parts></Parts>
+            <HomeSection></HomeSection> 
             <Brands></Brands>
             <UserExpection></UserExpection>
-            <ShowAddReview></ShowAddReview>
-            <HomeSection></HomeSection>        
+            <Project></Project>
+            <BestDesign></BestDesign>
           
         </div>
     );

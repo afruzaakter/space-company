@@ -8,8 +8,8 @@ const Navbar = () => {
   
     const menuItem = <>
         <li className='mr-2 font-bold text-secondary'><NavLink to="/">About</NavLink></li>
-        <li className='mr-2 font-bold text-secondary'><NavLink to="blogs">BLOGS</NavLink></li>
-        <li className='mr-2 font-bold text-secondary'><NavLink to="myportfolio">MY PORTFOLIO</NavLink></li>
+        <li className='mr-2 font-bold text-secondary'><NavLink to="/home">Project</NavLink></li>
+        <li className='mr-2 font-bold text-secondary'><NavLink to="/homes">Gallery</NavLink></li>
         
 
        

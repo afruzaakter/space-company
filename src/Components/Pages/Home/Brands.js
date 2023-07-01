@@ -9,7 +9,7 @@ const Brands = () => {
                 <h1 className='text-4xl text-primary font-bold'>User Expectation</h1>
             </div>
 
-          <div className='grid grid-cols-4 gap-4'>
+          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4'>
           <div class="card w-72 bg-base-100 shadow-xl">
             <div class="card-body">
             <h2 class="card-title">2500+</h2>

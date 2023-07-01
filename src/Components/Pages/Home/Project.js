@@ -4,7 +4,7 @@ import slider2 from '../../../assets/images/project 5.png'
 
 const Project = () => {
     return (
-        <div className='grid lg:grid-cols-2 gap-14 ml-16 p-10'>
+        <div className='grid lg:grid-cols-2 gap-14 lg:ml-16 p-10'>
             <div class="  bg-base-100 ">
           <figure className='w-96 ml-24'><img src={slider1} alt="Shoes" /></figure>
           <div class="card-body w-96 ml-20">

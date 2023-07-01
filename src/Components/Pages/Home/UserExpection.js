@@ -4,9 +4,9 @@ import slider2 from '../../../assets/images/project 2.png'
 import slider3 from '../../../assets/images/project 3.png'
 const UserExpection = () => {
     return (
-        <div className='mt-16 mb-16 ml-44 '>
+        <div className='mt-16 mb-16 lg:ml-44 '>
             {/* <h1 className='text-4xl ml-40 mb-5 font-bold text-primary animate__animated animate__backInRight'>User Expectation</h1> */}
-            <div className="stats shadow gap-6  ml">
+            <div className="lg:stats shadow gap-6  ml">
 
             <div class="card lg:w-96 bg-base-100 shadow-xl">
          

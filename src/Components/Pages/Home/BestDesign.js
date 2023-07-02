@@ -1,5 +1,8 @@
 import React from 'react';
 import slide from '../../../assets/images/project 8.png'
+import slide1 from '../../../assets/images/project img-1.jpg'
+import slide2 from '../../../assets/images/project img 4.jpg'
+import slide3 from '../../../assets/images/project 5.png'
 
 const BestDesign = () => {
     return (
@@ -14,18 +17,18 @@ const BestDesign = () => {
        <div className='grid lg:grid-cols-2 gap-6 mt-10'>
        
        <div className='lg:mb-6'>
-       <img src={slide}/>
+       <img className='w-96 h-64' src={slide}/>
        </div>
        <div>
-       <img src={slide}/>
+       <img className='w-96 h-64' src={slide1}/>
        </div>
        
      
        <div className='lg:mb-6'>
-       <img src={slide}/>
+       <img className='w-96 h-64' src={slide2}/>
        </div>
        <div>
-       <img src={slide}/>
+       <img className='w-96 h-64' src={slide3}/>
        </div>
       
        </div>
